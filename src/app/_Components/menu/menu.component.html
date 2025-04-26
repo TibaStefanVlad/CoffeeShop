@@ -1,0 +1,18 @@
+<div class="menu">
+    <div class="ourcoffee">
+        <h1>Our Coffee</h1>
+    </div>
+
+    <div class="coffee-list">
+        @for (coffeeChunk of chunkedCoffeeList; track $index) {
+                <div class="coffee-row">
+                    @for (coffee of coffeeChunk; track $index) {
+                        <app-coffee-card
+                        (orderEvent)="addToCart(coffee)"
+                        [coffee]="coffee"> 
+                        </app-coffee-card>
+                    }
+                </div>
+            }
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<nav class="navbar">
+    <div class="brand">
+        <a href="">☕ Coffee Shop</a>
+    </div>
+    <div class="container">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#home">Home</a></li>
+            <li class="nav-item"><a href="#menu">Menu</a></li>
+            <li class="nav-item"><a href="#about">About Us</a></li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <app-search-bar></app-search-bar>
+</nav>
+<div class="photo-container">
+    <img src="./assets/coffeeInterior.webp" alt="Coffee Shop" class="photo">
+    <div class="overlay">
+        <button class="overlay-button" (click)="order()">Order now</button>
+        
+        <div class="coffee-list-container">
+            <ul class="coffee-list">
+                @for (coffee of coffeeService.orderList(); track $index) {
+                    <li class="coffee-item">
+                        {{ coffee.name }}
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

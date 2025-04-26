@@ -1,0 +1,28 @@
+.menu {
+    text-align: center;
+    padding: 20px;
+    height: 100vh; 
+}
+
+.ourcoffee h1 {
+    font-size: 2.5rem;
+    color: #6b4f4f;
+    margin-bottom: 20px;
+}
+
+.coffee-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds spacing between rows */
+}
+
+.coffee-row {
+    display: flex;
+    justify-content: center; /* Centers the cards in each row */
+    gap: 20px; /* Adds spacing between cards */
+}
+
+app-coffee-card {
+    flex: 0 0 calc(33.33% - 20px); /* Ensures 3 cards per row with spacing */
+    max-width: 300px; /* Optional: Set a max width for the cards */
+}
